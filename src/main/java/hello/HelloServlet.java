@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //http://localhost:8080/hello.kpc
-@WebServlet("/hello.kpc")
+@WebServlet("/hello")
 
 public class HelloServlet extends HttpServlet {
 	@Override
@@ -24,6 +24,17 @@ public class HelloServlet extends HttpServlet {
 		out.println("</head>                       ");
 		out.println("<body>                        ");
 		out.println("<h1>Hello Servelt</h1>        ");
+		
+		String id = request.getParameter("id");
+		String email = request.getParameter("email");
+		String pwd = request.getParameter("pwd");
+		
+		out.println("<ul>                          ");
+		out.println("<li> 아이디 : "+id               );
+		out.println("<li> 이메일 : "+email            );
+		out.println("<li> 비번 : "+pwd               );
+		out.println("</ul>"                         );
+		
 		out.println("</body>                       ");
 		out.println("</html>");
 	}
