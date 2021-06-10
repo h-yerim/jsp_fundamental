@@ -15,8 +15,10 @@
             $('#btn').click(function(){
 
                 $.ajax({
-                    url: 'data.json',
+                    url: 'C:\\Users\\user\\eclipse-workspace2\\Jsp_Fundamental\\WebContent\\joong-gu',
                     dataType: 'json',
+                    xhr.open('GET',url,true);
+                    xhr.send(null);
                     error: function(){
                         alert('error')
                     },
@@ -24,7 +26,7 @@
                         //console.log(json);
                         //console.log(typeof json);
                         
-                        const dataArray = json.data;
+                        const dataArray = data.json;
                         let html = "<div class=table-resposive>";
                         html += "<table>";
                         html += "<tr>";
