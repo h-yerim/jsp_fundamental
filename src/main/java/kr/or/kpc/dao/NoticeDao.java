@@ -203,6 +203,39 @@ public class NoticeDao {
 		}
 	}
 	
+	public int getMaxNum() {
+		int resultCount = 0;
+
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			con = ConnLocator.getConnect();
+			StringBuilder sql = new StringBuilder();
+			sql.append("SELECT ifnull(MAX(n_num)+1,1) ");
+			sql.append("FROM notice ");
+
+			pstmt = con.prepareStatement(sql.toString());
+
+			int index = 1;
+		
+			rs = pstmt.executeQuery();
+			if (rs.next()) { //어차피 count 하면 나올값이 하나일거기때문에 없거나 if문 돌린다.
+				index = 1;
+				resultCount = rs.getInt(index++);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close(con, pstmt, rs);
+		}
+
+		return resultCount;
+	}
+	
 	
 
 

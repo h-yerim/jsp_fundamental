@@ -74,6 +74,7 @@
 
     th{
         background-color: powderblue;
+        text-align: center;
     }
 
     td{

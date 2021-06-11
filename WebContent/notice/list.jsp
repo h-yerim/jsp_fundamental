@@ -6,7 +6,7 @@
 
 <%
 	String tempPage = request.getParameter("page");
-	int cPage = 0;
+	int cPage = 0; //현재페이지
 	if(tempPage == null || tempPage.length()==0){
 		cPage = 1;
 	}
@@ -21,8 +21,16 @@
 	cPage = 2 -> 10, 10;
 	cPage = 3 -> 20, 10;
 	*/
-	int displayCount = 3;
+	int displayCount = 3; //페이지당 보여주는 게시글 개수인듯(?)
+	int totalRows = 0; // notice의 총 행의 개수인듯
+	int currentBlock = 0;
+	int totalBlock = 0;
+	int totalPage = 0;
+	int startPage = 0;
+	int endPage = 0;
+	int pageDisplayCount = 4; //(페이지나눠주는...변수인듯 총 4페이지까지있다 그런 근데 페이지값은 displaycount와 연관있음 몇개보여주느냐에따라 페이지개수결정되기때문)
 	int start = 0 + (cPage-1)*displayCount; //등차수열 (초항이 0임)
+	
 	NoticeDao dao = NoticeDao.getInstance();
 	ArrayList<NoticeDto> list = dao.select(start, displayCount);
 	
@@ -87,14 +95,7 @@
 							Previous 1 2 3 4 5 6 7 8 9 10 Next => currentBLock: 1block
 							Previous 11 12 13 Next (Next 누르면) => currentBlock: 2block
 						*/
-						int totalRows = dao.getRows(); //128
-						int currentBlock = 0;
-						int totalBlock = 0;
-						int totalPage = 0;
-						int startPage = 0;
-						int endPage = 0;
-						int pageDisplayCount = 4;
-						
+						totalRows = dao.getRows(); //128
 						if(totalRows%displayCount==0){
 							totalPage = totalRows/displayCount;
 						} else{
