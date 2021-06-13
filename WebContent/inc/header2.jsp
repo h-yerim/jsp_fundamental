@@ -18,7 +18,7 @@
   	</head>
   	<body>
      <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color : #7952b3">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color : red">
 
      <button class="navbar-toggler" type="button" data-toggle="collapse" 
      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -44,7 +44,7 @@
            </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           	<a class="dropdown-item" href="path.jsp">보자보자모두보자</a>
-          	<a class="dropdown-item" href="r_pathA.jsp">코스A</a>
+          	<a class="dropdown-item" href="pathA.jsp">코스A</a>
           	<a class="dropdown-item" href="pathB.jsp">코스B</a>
           	<a class="dropdown-item" href="pathC.jsp">코스C</a>
           	<a class="dropdown-item" href="pathD.jsp">코스D</a>

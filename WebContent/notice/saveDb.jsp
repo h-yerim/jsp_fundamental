@@ -14,7 +14,7 @@
 	if(success){	
 %>		
 	<script>
-		alert('글이 추가되어습니다.');
+		alert('글이 추가되었습니다.');
 		location.href = "list.jsp?page=1";
 	</script>
 

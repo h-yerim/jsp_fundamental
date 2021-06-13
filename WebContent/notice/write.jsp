@@ -13,7 +13,6 @@
 		cPage = 1;
 	}
 %>
-
   	<!-- breadcrumb start -->
   	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
@@ -49,7 +48,7 @@
 				  
 				</form>
 				<div class="text-right">
-					<a class="btn btn-secondary" href="list.jsp" 
+					<a class="btn btn-secondary" href="list.jsp?page=<%=cPage %>" 
 					role="button">리스트</a>
 					<a class="btn btn-success" id="saveNotice"
 					role="button">저장</a>
@@ -61,11 +60,11 @@
 	</div>
 	<!-- container end -->
 	<script>
-		$(function('#saveNotice').click(function(){
+		$(function(){
+			$('#saveNotice').click(function(){
 				noticeForm.submit();
 			});
 		});
 	</script>
-	
 <%@ include file="../inc/footer.jsp" %>
 	
