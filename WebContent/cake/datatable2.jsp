@@ -57,51 +57,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header__top__inner">
-                            <div class="header__logo">
-                                <a href="./index.html"><img src="img/joongulogo.png" style="width: 100px; height: 80px;"></a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="canvas__open"><i class="fa fa-bars"></i></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.html">홈</a></li>
-                            <li><a href="./introduce.html">문화재 소개</a></li>
-							<li><a href="#">위치 기반 추천</a>
-                                <ul class="dropdown">
-                                    <li><a href="./course.html">전체 코스</a></li>
-                                    <li><a href="./courseA.html">코스A</a></li>
-                                    <li><a href="./courseB.html">코스B</a></li>
-                                    <li><a href="./courseC.html">코스C</a></li>
-                                    <li><a href="./courseD.html">코스D</a></li>
-                                </ul>
-                            <li class="active"><a href="#">문화재 종류</a>
-                                <ul class="dropdown">
-                                    <li><a href="./datatable2.jsp">구분별(이름순)</a></li>
-                                    <li><a href="./datatable3.jsp">연도별</a></li>
-                 
-                                </ul>
-                            </li>
-                            <li><a href="./ourteam.html">Our Team</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+    <%@ include file="HeadFoot/header.jsp"%>
     <!-- Header Section End -->
     
     <!-- Breadcrumb Begin -->
@@ -115,7 +71,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                    	<a href="./index.html">Home</a>
+                    	<a href="./index.jsp">Home</a>
                         <a href="./datatable2.jsp" style="color: red;">구분별(이름순)</a>
                         <a href="./datatable3.jsp">연도별</a>
                     </div>
@@ -207,51 +163,8 @@
  
  
     <!-- Footer Section Begin -->
- <footer class="footer set-bg" style="background-color:black;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer__widget">
-                        <h6>WORKING HOURS</h6>
-                        <ul>
-                            <li>Monday - Friday: 09:00 am – 18:00 pm</li>
-                            <li>Saturday: 휴일</li>
-                            <li>Sunday: 휴일</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                             <a href="#"><img src="myimg/foot2.png" style="width: 300px; height: 200px;"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer__newslatter">
-                        <h6>Subscribe</h6>
-                        <p>Get latest updates and offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Email">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://colorlib.com" target="_blank">중구가 시키드나</a>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      </p>
-                  </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+ 	<%@ include file="HeadFoot/footer.jsp"%>
+    <!-- Footer Section End -->
 
 <!-- Search Begin -->
 <div class="search-model">
