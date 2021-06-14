@@ -3,7 +3,7 @@
 <%@page import="java.io.InputStream"%>
 <%@page import="java.net.URL"%>
 <%@ page contentType="application/json;charset=utf-8" %>
-<%-- xml파일의 경우 위의 문장에 json위치에 xml을 쓰면 됨. --%>
+
 
 <%
 	String url = request.getParameter("url");

@@ -33,7 +33,7 @@ public class CultureDao2 {
 			StringBuilder sql = new StringBuilder();
 			sql.append("SELECT c_year,c_kind,c_name,c_loc ");
 			sql.append("FROM culture ");
-			sql.append("ORDER BY c_year ");//구분+이름별정리
+			sql.append("ORDER BY c_year,c_name ");//연도별 정리
 			sql.append("LIMIT ?,? ");
 			
 			pstmt = con.prepareStatement(sql.toString());
