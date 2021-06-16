@@ -37,8 +37,8 @@
                             </li>
                             <li class="<%if(path!=null&&path.endsWith("classify1.jsp")||path.endsWith("classify2.jsp")){%>active<%} %>"><a href="#">구분 기반 추천</a>
                                 <ul class="dropdown">
-                                    <li><a href="./classify1.jsp">지정 구분 코스</a></li>
-                                    <li><a href="./classify2.jsp">등록 구분 코스</a></li>
+                                    <li><a href="./classify1.jsp">지정 구분</a></li>
+                                    <li><a href="./classify2.jsp">등록 구분</a></li>
                                 </ul>
                             </li>
                             <li class="<%if(path!=null&&path.endsWith("datatable2.jsp")||path.endsWith("datatable3.jsp")){%>active<%} %>"><a href="#">문화재 종류</a>
@@ -55,4 +55,5 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
+    <!-- Header Section End --> 
+    
