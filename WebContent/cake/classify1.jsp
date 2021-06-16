@@ -68,7 +68,8 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
                         <a href="./index.jsp">Home</a>
-                        <span>Country & City Designated</span>
+                         <a href="./classify1.jsp" style="color: red;">Country & City Designated</a>
+                         <a href="./classify2.jsp">Registered</a>
                     </div>
                 </div>
             </div>

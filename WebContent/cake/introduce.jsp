@@ -67,7 +67,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
                         <a href="./index.jsp">Home</a>
-                        <span>문화재 소개</span>
+                        <a href="#" style="color: red;">문화재 소개</a>
                     </div>
                 </div>
             </div>

@@ -8,15 +8,17 @@
 	String name = request.getParameter("name");
 	String status = request.getParameter("status");
 	int num = Integer.parseInt(request.getParameter("num"));
-	int cPage = Integer.parseInt(request.getParameter("page"));
+
 	CustomerDao dao = CustomerDao.getInstance();
 	boolean success = dao.update(
 		new CustomerDto(num,null,newpwd,name,status,null));
 	if(success){
+		CustomerDto dto = dao.select(num);
+		session.setAttribute("login",dto); ;//update한 정보를 session에 다시가져오는것
 %>
 	<script>
 	alert('회원이 수정 되었습니다.');
-	location.href="view.jsp?num=<%=num%>&page=<%=cPage%>";
+	location.href="mypage.jsp";
 	</script>
 <%}else{ %>
 <script>

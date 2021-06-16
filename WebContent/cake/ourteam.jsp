@@ -68,7 +68,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
                         <a href="./index.jsp">Home</a>
-                        <span>Our Team</span>
+                        <a href="#" style="color: red;">Our Team</a>
                     </div>
                 </div>
             </div>
